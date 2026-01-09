@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { MoreHorizontal, Search, Filter, Download } from "lucide-react";
@@ -30,9 +30,7 @@ export default function ListingsPage() {
 		<div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
 			<div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
 				<div>
-					<h2 className="text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-						Listings
-					</h2>
+					<h2 className="text-3xl font-bold tracking-tight">Listings</h2>
 					<p className="text-muted-foreground mt-1 text-lg">
 						Manage ticket listings across all events.
 					</p>
@@ -46,27 +44,27 @@ export default function ListingsPage() {
 
 			{/* Quick StatsRow for Listings */}
 			<div className="grid gap-4 md:grid-cols-4">
-				<Card className="glass card-hover border-l-4 border-l-primary">
-					<CardHeader className="p-4 pb-2 text-muted-foreground text-xs uppercase font-semibold">
+				<Card className="glass card-hover">
+					<CardHeader className="p-4 pb-2 text-muted-foreground text-xs uppercase font-extrabold tracking-widest">
 						Total Listings
 					</CardHeader>
-					<CardContent className="p-4 pt-0 text-2xl font-bold">
+					<CardContent className="p-4 pt-0 text-3xl font-black">
 						{listings.length}
 					</CardContent>
 				</Card>
-				<Card className="glass card-hover border-l-4 border-l-green-500">
-					<CardHeader className="p-4 pb-2 text-muted-foreground text-xs uppercase font-semibold">
+				<Card className="glass card-hover">
+					<CardHeader className="p-4 pb-2 text-muted-foreground text-xs uppercase font-extrabold tracking-widest">
 						Active Listings
 					</CardHeader>
-					<CardContent className="p-4 pt-0 text-2xl font-bold text-green-500">
+					<CardContent className="p-4 pt-0 text-3xl font-black text-green-600">
 						{listings.filter((l) => l.status === "active").length}
 					</CardContent>
 				</Card>
-				<Card className="glass card-hover border-l-4 border-l-amber-500">
-					<CardHeader className="p-4 pb-2 text-muted-foreground text-xs uppercase font-semibold">
+				<Card className="glass card-hover">
+					<CardHeader className="p-4 pb-2 text-muted-foreground text-xs uppercase font-extrabold tracking-widest">
 						Total Value
 					</CardHeader>
-					<CardContent className="p-4 pt-0 text-2xl font-bold text-amber-500">
+					<CardContent className="p-4 pt-0 text-3xl font-black text-blue-600">
 						KES{" "}
 						{(
 							listings.reduce(
@@ -77,11 +75,11 @@ export default function ListingsPage() {
 						M
 					</CardContent>
 				</Card>
-				<Card className="glass card-hover border-l-4 border-l-purple-500">
-					<CardHeader className="p-4 pb-2 text-muted-foreground text-xs uppercase font-semibold">
+				<Card className="glass card-hover">
+					<CardHeader className="p-4 pb-2 text-muted-foreground text-xs uppercase font-extrabold tracking-widest">
 						Avg Price
 					</CardHeader>
-					<CardContent className="p-4 pt-0 text-2xl font-bold text-purple-500">
+					<CardContent className="p-4 pt-0 text-3xl font-black text-purple-600">
 						KES{" "}
 						{Math.round(
 							listings.reduce((acc, curr) => acc + curr.price, 0) /

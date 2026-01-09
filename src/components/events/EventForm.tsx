@@ -46,9 +46,7 @@ const ticketCategorySchema = z.object({
 const formSchema = z.object({
 	name: z.string().min(2, "Name must be at least 2 characters"),
 	category: z.string().min(1, "Category is required"),
-	date: z.date({
-		required_error: "Date is required",
-	}),
+	date: z.date(),
 	venue: z.string().min(1, "Venue is required"),
 	status: z.enum(["draft", "published"]),
 	description: z.string().optional(),
@@ -67,7 +65,7 @@ type EventFormValues = z.infer<typeof formSchema>;
 
 export function EventForm() {
 	const form = useForm<EventFormValues>({
-		resolver: zodResolver(formSchema),
+		resolver: zodResolver(formSchema) as any,
 		defaultValues: {
 			name: "",
 			category: "",
@@ -325,7 +323,7 @@ export function EventForm() {
 								/>
 								<Button
 									type="button"
-									variant="metric"
+									variant="outline"
 									size="icon"
 									className="bg-red-100 hover:bg-red-200 text-red-600 mb-[2px]"
 									onClick={() => remove(index)}

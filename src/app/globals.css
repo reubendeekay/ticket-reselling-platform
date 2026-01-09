@@ -80,129 +80,195 @@
 }
 
 :root {
-	--radius: 0.5rem;
+	--radius: 0.75rem; /* Rounded-xl */
 
-	/* Light Mode Palette */
-	--background: oklch(0.97 0.01 260); /* Soft Grayish Blue #f6f8fb approx */
-	--foreground: oklch(0.13 0.03 260);
+	/* African-Inspired Light Mode Palette */
+	/* Background: Warm White */
+	--background: oklch(0.98 0.01 50); /* Warm White #FAF9F6 approx */
+	--foreground: oklch(0.24 0 0); /* Charcoal #3D3D3D approx */
 
-	--card: oklch(1 0 0); /* White #ffffff */
-	--card-foreground: oklch(0.13 0.03 260);
+	--card: oklch(1 0 0); /* White */
+	--card-foreground: oklch(0.24 0 0);
 
-	--popover: oklch(1 0 0); /* White */
-	--popover-foreground: oklch(0.13 0.03 260);
+	--popover: oklch(1 0 0);
+	--popover-foreground: oklch(0.24 0 0);
 
-	/* Primary: Vibrant Cyan/Blue #00bfff */
-	--primary: oklch(0.7 0.18 230);
-	--primary-foreground: oklch(1 0 0);
+	/* Primary: Terracotta/Burnt Orange #E07A5F */
+	--primary: oklch(0.65 0.18 35);
+	--primary-foreground: oklch(0.98 0.01 50);
 
-	--secondary: oklch(0.96 0.01 260);
-	--secondary-foreground: oklch(0.2 0.05 260);
+	/* Secondary: Savannah Gold #F4A261 */
+	--secondary: oklch(0.75 0.15 65);
+	--secondary-foreground: oklch(0.24 0 0);
 
-	--muted: oklch(0.96 0.01 260);
-	--muted-foreground: oklch(0.55 0.05 260);
+	--muted: oklch(0.96 0.01 50);
+	--muted-foreground: oklch(0.55 0.05 50);
 
-	--accent: oklch(0.95 0.04 230); /* Light Blue tint */
-	--accent-foreground: oklch(0.3 0.1 230);
+	/* Accent: Ankara Teal #2A9D8F */
+	--accent: oklch(0.65 0.15 180);
+	--accent-foreground: oklch(0.98 0.01 50);
 
 	/* Status Colors */
-	--destructive: oklch(0.6 0.2 25); /* Red #ef4444 approx */
-	--success: oklch(0.65 0.2 140); /* Green #22c55e approx */
-	--warning: oklch(0.7 0.18 55); /* Amber #f59e0b approx */
+	--destructive: oklch(0.55 0.22 25); /* Sunset Red #D64545 */
+	--success: oklch(0.65 0.2 140); /* Acacia Green #6A994E */
+	--warning: oklch(0.85 0.18 85); /* Sunrise Yellow #FFC857 */
 	--info: oklch(0.65 0.18 240);
 
-	--border: oklch(0.92 0.02 260);
-	--input: oklch(0.92 0.02 260);
-	--ring: oklch(0.7 0.18 230); /* Matches Primary */
-
-	--chart-1: oklch(0.7 0.18 230); /* Primary Blue */
-	--chart-2: oklch(0.65 0.2 140); /* Green */
-	--chart-3: oklch(0.7 0.18 35); /* Orange */
-	--chart-4: oklch(0.6 0.2 300); /* Purple */
-	--chart-5: oklch(0.6 0.2 25); /* Red */
-
-	/* Sidebar - Dominant Blue via specific variables override for light mode */
-	--sidebar: oklch(0.25 0.1 260); /* Robust Royal Blue */
-	--sidebar-foreground: oklch(0.98 0.01 260);
-	--sidebar-primary: oklch(
-		0.98 0.01 260
-	); /* White text for primary elements on blue bg */
-	--sidebar-primary-foreground: oklch(0.25 0.1 260); /* Blue text on white */
-	--sidebar-accent: oklch(0.3 0.1 260); /* Slightly lighter blue for hover */
-	--sidebar-accent-foreground: oklch(0.98 0.01 260);
-	--sidebar-border: oklch(0.3 0.1 260);
-	--sidebar-ring: oklch(0.98 0.01 260);
+	--border: oklch(0.92 0.02 50);
 }
-
-.dark {
-	/* Dark Mode Palette */
-	--background: oklch(0.12 0.04 260); /* Deep Navy/Black #0b1220 approx */
-	--foreground: oklch(0.98 0.01 260);
-
-	--card: oklch(0.17 0.04 260); /* Dark Card #1d2530 approx */
-	--card-foreground: oklch(0.98 0.01 260);
-
-	--popover: oklch(0.17 0.04 260);
-	--popover-foreground: oklch(0.98 0.01 260);
-
-	/* Primary: Light Gray/Blue #e6edf7 approx */
-	--primary: oklch(0.93 0.02 260);
-	--primary-foreground: oklch(0.13 0.03 260);
-
-	--secondary: oklch(0.2 0.05 260);
-	--secondary-foreground: oklch(0.98 0.01 260);
-
-	--muted: oklch(0.2 0.05 260);
-	--muted-foreground: oklch(0.7 0.05 260);
-
-	--accent: oklch(0.2 0.05 260);
-	--accent-foreground: oklch(0.98 0.01 260);
-
-	--destructive: oklch(0.6 0.2 25);
-	--border: oklch(0.22 0.04 260);
-	--input: oklch(0.22 0.04 260);
-	--ring: oklch(0.93 0.02 260);
-
-	--chart-1: oklch(0.7 0.18 230);
-	--chart-2: oklch(0.65 0.2 140);
-	--chart-3: oklch(0.7 0.18 35);
-	--chart-4: oklch(0.6 0.2 300);
-	--chart-5: oklch(0.6 0.2 25);
-
-	--sidebar: oklch(0.12 0.04 260);
-	--sidebar-foreground: oklch(0.98 0.01 260);
-	--sidebar-primary: oklch(0.93 0.02 260);
-	--sidebar-primary-foreground: oklch(0.13 0.03 260);
-	--sidebar-accent: oklch(0.2 0.05 260);
-	--sidebar-accent-foreground: oklch(0.98 0.01 260);
-	--sidebar-border: oklch(0.22 0.04 260);
-	--sidebar-ring: oklch(0.93 0.02 260);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
+	:root {
+		/* Neo-Brutalist Light Palette */
+		--background: 0 0% 100%; /* Pure White */
+		--foreground: 0 0% 0%; /* Pure Black */
+
+		--card: 0 0% 100%;
+		--card-foreground: 0 0% 0%;
+
+		--popover: 0 0% 100%;
+		--popover-foreground: 0 0% 0%;
+
+		--primary: 0 0% 0%; /* Black Buttons */
+		--primary-foreground: 75 100% 50%; /* Neon Yellow Text on Black */
+
+		--secondary: 75 100% 50%; /* Neon Yellow Accent */
+		--secondary-foreground: 0 0% 0%;
+
+		--muted: 0 0% 96%; /* Very light gray for subtle areas */
+		--muted-foreground: 0 0% 40%;
+
+		--accent: 75 100% 50%;
+		--accent-foreground: 0 0% 0%;
+
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 0 0% 98%;
+
+		--border: 0 0% 0%; /* Black Borders */
+		--input: 0 0% 0%;
+		--ring: 0 0% 0%;
+
+		--radius: 0px; /* Sharp corners */
+
+		--chart-1: 12 76% 61%;
+		--chart-2: 173 58% 39%;
+		--chart-3: 197 37% 24%;
+		--chart-4: 43 74% 66%;
+		--chart-5: 27 87% 67%;
+
+		--sidebar: 0 0% 100%;
+		--sidebar-foreground: 0 0% 0%;
+		--sidebar-primary: 0 0% 0%;
+		--sidebar-primary-foreground: 75 100% 50%;
+		--sidebar-accent: 75 100% 50%;
+		--sidebar-accent-foreground: 0 0% 0%;
+		--sidebar-border: 0 0% 0%;
+		--sidebar-ring: 0 0% 0%;
+
+		/* Custom Neo Styles */
+		--shadow-strength: 4px;
+	}
+
+	.dark {
+		/* Inverting for dark mode if needed, but sticking to Light requested */
+		--background: 0 0% 5%;
+		--foreground: 0 0% 100%;
+		--card: 0 0% 5%;
+		--card-foreground: 0 0% 100%;
+		--popover: 0 0% 5%;
+		--popover-foreground: 0 0% 100%;
+		--primary: 0 0% 100%; /* White Buttons */
+		--primary-foreground: 0 0% 0%;
+		--secondary: 75 100% 50%;
+		--secondary-foreground: 0 0% 0%;
+		--muted: 0 0% 15%;
+		--muted-foreground: 0 0% 65%;
+		--accent: 75 100% 50%;
+		--accent-foreground: 0 0% 0%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 0% 98%;
+		--border: 0 0% 100%; /* White Borders in Dark Mode */
+		--input: 0 0% 100%;
+		--ring: 0 0% 83.1%;
+		--chart-1: 220 70% 50%;
+		--chart-2: 160 60% 45%;
+		--chart-3: 30 80% 55%;
+		--chart-4: 280 65% 60%;
+		--chart-5: 340 75% 55%;
+
+		--sidebar: 0 0% 5%;
+		--sidebar-foreground: 0 0% 100%;
+		--sidebar-primary: 75 100% 50%;
+		--sidebar-primary-foreground: 0 0% 0%;
+		--sidebar-accent: 0 0% 15%;
+		--sidebar-accent-foreground: 0 0% 100%;
+		--sidebar-border: 0 0% 100%;
+		--sidebar-ring: 0 0% 83.1%;
+	}
+
 	* {
-		@apply border-border outline-ring/50;
+		@apply border-border;
 	}
 	body {
 		@apply bg-background text-foreground;
+		font-feature-settings: "rlig" 1, "calt" 1;
 	}
-	/* Ensure tables ALWAYS have a background color (White in light, Dark in dark) */
+
+	/* Typography Overrides for Brutalist feel */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-black tracking-tight uppercase;
+	}
+
 	table {
 		@apply bg-card text-card-foreground;
+	}
+	th {
+		@apply bg-black text-white font-bold uppercase tracking-wider border-b-2 border-black;
+	}
+	td {
+		@apply border-b border-black/20;
 	}
 }
 
 @layer utilities {
+	.neo-shadow {
+		box-shadow: 4px 4px 0px 0px currentColor;
+	}
+	.neo-shadow-sm {
+		box-shadow: 2px 2px 0px 0px currentColor;
+	}
+	.neo-shadow-lg {
+		box-shadow: 8px 8px 0px 0px currentColor;
+	}
+
+	.neo-border {
+		border: 2px solid currentColor;
+	}
+
+	/* Replace Glassmorphism with Neo-Brutalist Card Style */
+	.glass {
+		@apply bg-card border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+	}
+
+	.card-hover:hover {
+		@apply translate-x-[-2px] translate-y-[-2px] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all duration-200;
+	}
+
+	/* Scrollbar styling */
 	.no-scrollbar::-webkit-scrollbar {
 		display: none;
 	}
 	.no-scrollbar {
 		-ms-overflow-style: none;
 		scrollbar-width: none;
-	}
-
-	.glass {
-		@apply bg-white/70 dark:bg-[#1d2530]/70 backdrop-blur-md border border-white/20 dark:border-white/10;
 	}
 
 	/* Premium Card Styles */

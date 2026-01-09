@@ -50,7 +50,7 @@ export function Sidebar({ className }: SidebarProps) {
 	const menuItems = [
 		{
 			title: "Dashboard",
-			href: "/",
+			href: "/admin",
 			icon: LayoutDashboard,
 		},
 		{
@@ -58,9 +58,9 @@ export function Sidebar({ className }: SidebarProps) {
 			icon: CalendarDays,
 			group: "events",
 			items: [
-				{ title: "All Events", href: "/events" },
-				{ title: "Create Event", href: "/events/create" },
-				{ title: "Venues", href: "/events/venues" },
+				{ title: "All Events", href: "/admin/events" },
+				{ title: "Create Event", href: "/admin/events/create" },
+				{ title: "Venues", href: "/admin/events/venues" },
 			],
 		},
 		{
@@ -68,8 +68,8 @@ export function Sidebar({ className }: SidebarProps) {
 			icon: Users,
 			group: "users",
 			items: [
-				{ title: "All Users", href: "/users" },
-				{ title: "Verifications", href: "/users/verifications" },
+				{ title: "All Users", href: "/admin/users" },
+				{ title: "Verifications", href: "/admin/users/verifications" },
 			],
 		},
 		{
@@ -77,9 +77,9 @@ export function Sidebar({ className }: SidebarProps) {
 			icon: Ticket,
 			group: "listings",
 			items: [
-				{ title: "All Listings", href: "/listings" },
-				{ title: "Flagged", href: "/listings/flagged" },
-				{ title: "Price Monitoring", href: "/listings/price-monitoring" },
+				{ title: "All Listings", href: "/admin/listings" },
+				{ title: "Flagged", href: "/admin/listings/flagged" },
+				{ title: "Price Monitoring", href: "/admin/listings/price-monitoring" },
 			],
 		},
 		{
@@ -87,19 +87,19 @@ export function Sidebar({ className }: SidebarProps) {
 			icon: CreditCard,
 			group: "transactions",
 			items: [
-				{ title: "All Transactions", href: "/transactions" },
-				{ title: "Payouts", href: "/transactions/payouts" },
-				{ title: "Disputes", href: "/transactions/disputes" },
+				{ title: "All Transactions", href: "/admin/transactions" },
+				{ title: "Payouts", href: "/admin/transactions/payouts" },
+				{ title: "Disputes", href: "/admin/transactions/disputes" },
 			],
 		},
 		{
 			title: "Analytics",
-			href: "/analytics",
+			href: "/admin/analytics",
 			icon: BarChart3,
 		},
 		{
 			title: "Settings",
-			href: "/settings",
+			href: "/admin/settings",
 			icon: Settings,
 		},
 	];

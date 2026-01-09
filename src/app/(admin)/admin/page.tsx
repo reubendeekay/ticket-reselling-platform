@@ -11,7 +11,9 @@ export default function Home() {
 	return (
 		<div className="space-y-6">
 			<div className="flex items-center justify-between space-y-2">
-				<h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
+				<h2 className="text-4xl font-black tracking-tighter uppercase">
+					Dashboard
+				</h2>
 				<div className="flex items-center space-x-2">
 					<Button size="sm" variant="outline">
 						<Download className="mr-2 h-4 w-4" />

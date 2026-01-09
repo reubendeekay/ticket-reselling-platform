@@ -22,7 +22,7 @@ import {
 	FileDown,
 } from "lucide-react";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 
 export default function EventsPage() {
 	const [searchTerm, setSearchTerm] = useState("");
@@ -42,8 +42,10 @@ export default function EventsPage() {
 		<div className="space-y-6">
 			<div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
 				<div>
-					<h2 className="text-3xl font-bold tracking-tight">Events</h2>
-					<p className="text-muted-foreground">
+					<h2 className="text-4xl font-black tracking-tighter uppercase">
+						Events
+					</h2>
+					<p className="text-muted-foreground font-medium mt-1">
 						Manage and monitor all events on the platform.
 					</p>
 				</div>
@@ -59,7 +61,7 @@ export default function EventsPage() {
 				</div>
 			</div>
 
-			<div className="flex flex-col sm:flex-row gap-4 items-center justify-between bg-card p-4 rounded-lg border shadow-sm">
+			<div className="flex flex-col sm:flex-row gap-4 items-center justify-between glass p-4">
 				<div className="flex items-center gap-2 w-full sm:w-auto flex-1">
 					<div className="relative flex-1 max-w-sm">
 						<Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />

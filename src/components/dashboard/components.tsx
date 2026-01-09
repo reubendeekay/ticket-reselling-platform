@@ -170,7 +170,9 @@ export function DashboardCharts() {
 									borderColor: "hsl(var(--border))",
 								}}
 								itemStyle={{ color: "hsl(var(--foreground))" }}
-								formatter={(value: number) => `KES ${value.toLocaleString()}`}
+								formatter={(value: number | undefined) =>
+									value ? `KES ${value.toLocaleString()}` : ""
+								}
 							/>
 							<Line
 								type="monotone"

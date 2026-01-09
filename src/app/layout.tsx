@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Sidebar } from "@/components/layout/Sidebar";
-import { Header } from "@/components/layout/Header";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -16,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "TicketResellKE Admin",
-	description: "Admin dashboard for Kenya's premier ticket reselling platform",
+	title: "TicketResellKE",
+	description: "Kenya's Trusted Ticket Reselling Platform",
 };
 
 export default function RootLayout({
@@ -36,15 +34,7 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
-					<div className="flex min-h-screen bg-background text-foreground">
-						<Sidebar className="w-64 hidden md:block fixed h-screen z-30" />
-						<div className="flex-1 md:ml-64 flex flex-col min-h-screen">
-							<Header />
-							<main className="flex-1 overflow-auto p-4 md:p-6 lg:p-8 space-y-6">
-								{children}
-							</main>
-						</div>
-					</div>
+					{children}
 				</ThemeProvider>
 			</body>
 		</html>
